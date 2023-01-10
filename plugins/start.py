@@ -126,10 +126,10 @@ async def send_doc(client, message):
     except:
         await message.reply_text(text=f"Hello dear {message.from_user.first_name}  **we are currently working on this issue**\n\nPlease try to rename files from your another account.\nBecause this BOT can't rename file sent by some ids.\n\nIf you are an **ADMIN** Don't worry ! here we have a solution for you dear {message.from_user.first_name }.\n\nPlease use \n👉 `/addpremium your_other_userid` 👈 to use premium feautres\n\n",
                                   reply_markup=InlineKeyboardMarkup([
-                                                                     [InlineKeyboardButton("🦋 Contact LazyDeveloper 🦋", url='https://telegram.me/mRiDerDM')],
-                                                                     [InlineKeyboardButton("🔺 Watch Tutorial 🔺", url='https://youtube.com/@LazyDeveloperr')],
-                                                                     [InlineKeyboardButton("🦋 Visit Channel  ", url='https://t.me/LazyDeveloper'),
-                                                                     InlineKeyboardButton("  Support Group 🦋", url='https://t.me/LazyPrincessSupport')],
+                                                                     [InlineKeyboardButton("🦋 Contact Forever Knight 🦋", url='https://t.me/Forever_knigh')],
+                                                                     [InlineKeyboardButton("🔺 Patner 🔺", url='https://t.me/+kWQqxF2sQ8RhM2M1')],
+                                                                     [InlineKeyboardButton("🦋 Visit Channel  ", url='https://t.me/best_linkz'),
+                                                                     InlineKeyboardButton("  Support Group 🦋", url='https://t.me/tamilan48')],
                                                                      [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://p.paytm.me/xCTH/vo37hii9')]
                                                                     ]))
         await message.reply_text(text=f"🦋")
@@ -138,15 +138,15 @@ async def send_doc(client, message):
     c_time = time.time()
 
     if user_type == "Free":
-        LIMIT = 600
+        LIMIT = 0
     else:
-        LIMIT = 50
+        LIMIT = 0
     then = used_date + LIMIT
     left = round(then - c_time)
     conversion = datetime.timedelta(seconds=left)
     ltime = str(conversion)
     if left > 0:
-        await message.reply_text(f"```Sorry Dude I am not only for YOU \n Flood control is active so please wait for {ltime}```", reply_to_message_id=message.id)
+        await message.reply_text(f"```Sorry Dude I am only for YOU \n Flood control is inactive so please wait for {ltime}```", reply_to_message_id=message.id)
     else:
         # Forward a single message
         media = await client.get_messages(message.chat.id, message.id)
